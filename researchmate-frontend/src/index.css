@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --color-brand-50: #f0f4ff;
+  --color-brand-100: #e0e9ff;
+  --color-brand-200: #c7d7fe;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+
+  --color-surface: #f8f9fb;
+  --color-card: #ffffff;
+  --color-border: #e5e7eb;
+  --color-muted: #6b7280;
+  --color-text: #111827;
+}
+
+
+/* Tailwind v4 Preflight (included via @import above) already resets margins,
+   padding, and sets box-sizing: border-box. No manual reset needed. */
+
+
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 99px;
+}
+
+/* Smooth transitions globally */
+*, *::before, *::after {
+  transition-property: color, background-color, border-color, box-shadow, opacity, transform;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Report Markdown Prose ────────────────────────────────────────────────── */
+.prose-report { color: #1f2937; font-size: 0.9375rem; line-height: 1.75; }
+.prose-report h1 { font-size: 1.5rem;   font-weight: 700; color: #111827; margin: 1.25rem 0 0.5rem; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.4rem; }
+.prose-report h2 { font-size: 1.2rem;   font-weight: 700; color: #111827; margin: 1.1rem 0 0.4rem; }
+.prose-report h3 { font-size: 1.05rem;  font-weight: 600; color: #374151; margin: 0.9rem 0 0.3rem; }
+.prose-report p  { margin: 0.6rem 0; }
+.prose-report ul, .prose-report ol { padding-left: 1.5rem; margin: 0.6rem 0; }
+.prose-report ul { list-style-type: disc; }
+.prose-report ol { list-style-type: decimal; }
+.prose-report li { margin: 0.25rem 0; }
+.prose-report strong { font-weight: 600; color: #111827; }
+.prose-report em    { font-style: italic; }
+.prose-report code  { background: #f3f4f6; color: #6d28d9; font-size: 0.85em; padding: 0.15em 0.4em; border-radius: 4px; font-family: 'Fira Mono', monospace; }
+.prose-report pre   { background: #1e1e2e; color: #cdd6f4; border-radius: 10px; padding: 1rem 1.25rem; overflow-x: auto; margin: 0.75rem 0; }
+.prose-report pre code { background: transparent; color: inherit; padding: 0; }
+.prose-report blockquote { border-left: 3px solid #8b5cf6; padding-left: 1rem; color: #6b7280; margin: 0.75rem 0; font-style: italic; }
+.prose-report hr { border: none; border-top: 1px solid #e5e7eb; margin: 1rem 0; }
+.prose-report a { color: #4f46e5; text-decoration: underline; }
+.prose-report a:hover { color: #4338ca; }
+
